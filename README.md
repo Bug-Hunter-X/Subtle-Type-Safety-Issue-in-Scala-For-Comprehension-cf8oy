@@ -1,0 +1,3 @@
+# Subtle Type Safety Issue in Scala For Comprehension
+
+This example demonstrates a potential issue in Scala related to using `Try` within a for comprehension when dealing with potentially unsafe type conversions. The code intends to iterate through a list of `User` objects. It attempts to convert the `id` (Int) to a String and back to an Int using `Try` and `toOption`. If this conversion fails, the `User` object is silently omitted instead of any error handling.
